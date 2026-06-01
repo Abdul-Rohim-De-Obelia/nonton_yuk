@@ -12,10 +12,26 @@
 }
 
 body {
-  background-color: var(--c-cream);
-  color: var(--c-brown);
-  font-family: 'Inter', sans-serif;
-  -webkit-font-smoothing: antialiased;
+  background: #f7f3ee;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(200,162,124,.25),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(255,255,255,.8),
+      transparent 40%
+    );
 }
 
 /* Kartu putih bersih dengan shadow halus */
