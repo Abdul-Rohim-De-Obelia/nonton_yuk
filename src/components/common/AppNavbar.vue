@@ -22,123 +22,172 @@ async function handleLogout() {
     <nav
       class="
       max-w-7xl mx-auto
-      h-16
+      h-18
       px-6
-      flex items-center justify-between
+
+      flex items-center gap-4
 
       rounded-3xl
-      bg-white/40
+
+      bg-white/35
       backdrop-blur-2xl
+
       border border-white/50
 
-      shadow-[0_8px_30px_rgba(0,0,0,0.08)]
+      shadow-[0_10px_35px_rgba(0,0,0,0.08)]
       "
     >
       <!-- Logo -->
       <router-link
         to="/"
         class="
-        flex items-center gap-2
-        text-[#2D2A26]
-        font-bold text-xl
+        shrink-0
+        text-2xl
+        font-bold
         tracking-wide
+        text-[#C8A27C]
         "
       >
-        🎬
-        <span>Nonton Yuk</span>
+        Nonton<span class="text-[#4B3A2F]">Yuk</span>
       </router-link>
 
-      <!-- Menu -->
-      <div
-        class="
-        hidden md:flex
-        items-center gap-2
-
-        bg-white/30
-        px-2 py-2
-        rounded-2xl
-        "
-      >
-        <router-link
-          to="/"
-          class="nav-link"
-        >
-          Beranda
-        </router-link>
-
-        <router-link
-          to="/favorites"
-          class="nav-link"
-        >
-          Favorit
-        </router-link>
-
-        <router-link
-          to="/history"
-          class="nav-link"
-        >
-          Riwayat
-        </router-link>
-      </div>
-
-      <!-- Right -->
-      <div class="flex items-center gap-3">
-
-        <!-- Search -->
+      <!-- Search -->
+      <div class="hidden md:flex flex-1 max-w-lg mx-4">
         <div
           class="
-          hidden md:flex
-          items-center
-          px-4 py-2
+          flex w-full
 
-          rounded-xl
-          bg-white/30
+          bg-white/50
+          backdrop-blur-xl
+
+          border border-white/60
+
+          rounded-2xl
+          overflow-hidden
           "
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-4 h-4 text-gray-500"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M21 21l-4.35-4.35M16 10a6 6 0 11-12 0 6 6 0 0112 0z"
-            />
-          </svg>
-
           <input
+            v-model="q"
+            @keyup.enter="doSearch"
             type="text"
-            placeholder="Cari film..."
+            placeholder="Cari film favoritmu..."
             class="
-            ml-2
+            flex-1
+            px-4 py-3
+
             bg-transparent
             outline-none
+
             text-sm
-            w-36
+            text-[#2D2A26]
+
+            placeholder:text-[#8B8178]
             "
           />
+
+          <button
+            @click="doSearch"
+            class="
+            px-5
+
+            bg-[#C8A27C]
+            text-white
+
+            hover:bg-[#B88C61]
+            transition
+            "
+          >
+            Cari
+          </button>
         </div>
+      </div>
 
-        <!-- Profile -->
-        <button
-          class="
-          w-10 h-10
-          rounded-full
+      <!-- Auth Menu -->
+      <div class="ml-auto flex items-center gap-3">
 
-          bg-[#C8A27C]
-          text-white
-          font-semibold
+        <template v-if="auth.isLoggedIn">
 
-          hover:scale-105
-          transition
-          "
-        >
-          J
-        </button>
+          <router-link
+            to="/profile"
+            class="
+            px-4 py-2
+
+            rounded-xl
+
+            bg-white/40
+            border border-white/50
+
+            text-[#2D2A26]
+            hover:bg-white/60
+
+            transition
+            "
+          >
+            Profil
+          </router-link>
+
+          <button
+            @click="handleLogout"
+            class="
+            px-4 py-2
+
+            rounded-xl
+
+            bg-[#4B3A2F]
+            text-white
+
+            hover:bg-[#5B473A]
+
+            transition
+            "
+          >
+            Keluar
+          </button>
+
+        </template>
+
+        <template v-else>
+
+          <router-link
+            to="/login"
+            class="
+            px-4 py-2
+
+            rounded-xl
+
+            bg-white/40
+            border border-white/50
+
+            text-[#2D2A26]
+
+            hover:bg-white/60
+
+            transition
+            "
+          >
+            Masuk
+          </router-link>
+
+          <router-link
+            to="/register"
+            class="
+            px-4 py-2
+
+            rounded-xl
+
+            bg-[#C8A27C]
+            text-white
+
+            hover:bg-[#B88C61]
+
+            transition
+            "
+          >
+            Daftar
+          </router-link>
+
+        </template>
+
       </div>
     </nav>
   </header>
