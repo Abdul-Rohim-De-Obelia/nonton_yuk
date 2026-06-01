@@ -1,0 +1,24 @@
+/* File ini diletakkan di: src/assets/styles/main.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Variabel warna cream */
+:root {
+  --c-cream: #F5F1E8;
+  --c-cream-light: #FAF6EF;
+  --c-brown: #2D2A26;
+  --c-accent: #A47551;
+}
+
+body {
+  background-color: var(--c-cream);
+  color: var(--c-brown);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Kartu putih bersih dengan shadow halus */
+.card-base {
+  @apply bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300;
+}
