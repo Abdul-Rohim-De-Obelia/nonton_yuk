@@ -7,13 +7,14 @@ const props = defineProps({
   poster: { type: String, default: '' }
 })
 
-// Gunakan computed agar reaktif ketika src berubah
-const isEmbed = computed(() => /youtube|youtu\.be|vimeo|embed/i.test(props.src ?? ''))
+// Jika URL berakhiran ekstensi video langsung → pakai <video>
+// Semua URL lainnya (iframe player, YouTube, Vimeo, dll) → pakai <iframe>
+const isDirectVideo = computed(() => /\.(mp4|mkv|webm|ogg|avi|mov)(\?.*)?$/i.test(props.src ?? ''))
+const isEmbed = computed(() => !!props.src && !isDirectVideo.value)
 
-// Untuk YouTube, pastikan URL menggunakan format /embed/
+// Untuk YouTube, konversi URL watch?v= ke /embed/
 const embedSrc = computed(() => {
   if (!props.src) return ''
-  // Konversi URL youtube.com/watch?v=ID ke youtube.com/embed/ID
   const ytMatch = props.src.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\s]+)/)
   if (ytMatch) return `https://www.youtube.com/embed/${ytMatch[1]}?autoplay=1`
   return props.src
