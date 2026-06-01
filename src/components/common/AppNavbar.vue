@@ -15,7 +15,30 @@ function doSearch() {
 async function handleLogout() {
   await auth.logout(); router.push('/')
 }
+
+  import { ref, onMounted, onUnmounted } from 'vue'
+
+// State untuk mendeteksi apakah halaman sudah di-scroll
+const isScrolled = ref(false)
+
+// Fungsi untuk mengecek posisi scroll
+const handleScroll = () => {
+  // Jika scroll lebih dari 20px, aktifkan efek glassmorphism
+  isScrolled.value = window.scrollY > 20
+}
+
+// Pasang event listener saat komponen dimuat
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+// Hapus event listener saat komponen dihancurkan (best practice)
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
+
+
 
 <template>
   <nav
