@@ -3,10 +3,16 @@ import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 import { supabase } from '@/services/supabase'
 
+const ADMIN_EMAILS = [
+  '2337051@students.upp.ac.id',
+  // tambahkan email admin lain di sini nanti
+]
+
 export const useAuthStore = defineStore('auth', () => {
   const user = ref(null)
   const loading = ref(false)
   const isLoggedIn = computed(() => !!user.value)
+  const isAdmin = computed(() => ADMIN_EMAILS.includes(user.value?.email))
 
   // Pulihkan sesi & pantau perubahan auth
   async function init() {
@@ -42,5 +48,5 @@ export const useAuthStore = defineStore('auth', () => {
     user.value = null
   }
 
-  return { user, loading, isLoggedIn, init, register, login, logout }
+  return { user, loading, isLoggedIn, isAdmin, init, register, login, logout }
 })
