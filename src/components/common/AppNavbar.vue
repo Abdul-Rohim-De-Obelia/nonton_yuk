@@ -58,29 +58,6 @@ async function handleLogout() {
   </nav>
 </template>
 
-<script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
-
-// State untuk mendeteksi apakah halaman sudah di-scroll
-const isScrolled = ref(false)
-
-// Fungsi untuk mengecek posisi scroll
-const handleScroll = () => {
-  // Jika scroll lebih dari 20px, aktifkan efek glassmorphism
-  isScrolled.value = window.scrollY > 20
-}
-
-// Pasang event listener saat komponen dimuat
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-})
-
-// Hapus event listener saat komponen dihancurkan (best practice)
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
-</script>
-
 <style scoped>
 /* CSS khusus untuk efek Glassmorphism bernuansa Cream */
 .glass-nav {
