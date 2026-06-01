@@ -258,7 +258,7 @@ function notify(message, type = 'success') {
             <!-- Video URL -->
             <div>
               <label class="block text-sm font-medium text-brown mb-1">URL Video (Google Drive)</label>
-              <input v-model="form.video_url" type="url" placeholder="https://drive.google.com/uc?export=download&id=..."
+              <input v-model="form.video_url" type="url" placeholder="https://drive.google.com/file/d/FILE_ID/preview"
                 class="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-accent" />
             </div>
 
