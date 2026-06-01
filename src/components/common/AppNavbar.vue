@@ -18,25 +18,127 @@ async function handleLogout() {
 </script>
 
 <template>
-  <header class="sticky top-0 z-50 bg-cream-light/90 backdrop-blur border-b border-accent/10">
-    <nav class="max-w-7xl mx-auto px-4 h-16 flex items-center gap-4">
-      <router-link to="/" class="font-semibold text-xl text-accent font-sans">Nonton<span class="text-brown">Yuk</span></router-link>
+  <header class="sticky top-4 z-50 px-4">
+    <nav
+      class="
+      max-w-7xl mx-auto
+      h-16
+      px-6
+      flex items-center justify-between
 
-      <div class="hidden md:flex flex-1 max-w-md mx-4">
-        <input v-model="q" @keyup.enter="doSearch" type="text" placeholder="Cari film..."
-          class="w-full px-4 py-2 rounded-l-xl bg-white border border-accent/20 focus:outline-none focus:border-accent text-sm" />
-        <button @click="doSearch" class="px-4 bg-accent text-white rounded-r-xl text-sm hover:bg-accent/90">Cari</button>
+      rounded-3xl
+      bg-white/40
+      backdrop-blur-2xl
+      border border-white/50
+
+      shadow-[0_8px_30px_rgba(0,0,0,0.08)]
+      "
+    >
+      <!-- Logo -->
+      <router-link
+        to="/"
+        class="
+        flex items-center gap-2
+        text-[#2D2A26]
+        font-bold text-xl
+        tracking-wide
+        "
+      >
+        🎬
+        <span>Nonton Yuk</span>
+      </router-link>
+
+      <!-- Menu -->
+      <div
+        class="
+        hidden md:flex
+        items-center gap-2
+
+        bg-white/30
+        px-2 py-2
+        rounded-2xl
+        "
+      >
+        <router-link
+          to="/"
+          class="nav-link"
+        >
+          Beranda
+        </router-link>
+
+        <router-link
+          to="/favorites"
+          class="nav-link"
+        >
+          Favorit
+        </router-link>
+
+        <router-link
+          to="/history"
+          class="nav-link"
+        >
+          Riwayat
+        </router-link>
       </div>
 
-      <div class="ml-auto flex items-center gap-3">
-        <template v-if="auth.isLoggedIn">
-          <router-link to="/profile" class="text-sm hover:text-accent">Profil</router-link>
-          <button @click="handleLogout" class="text-sm px-3 py-1.5 rounded-xl bg-brown text-cream hover:bg-brown-soft">Keluar</button>
-        </template>
-        <template v-else>
-          <router-link to="/login" class="text-sm hover:text-accent">Masuk</router-link>
-          <router-link to="/register" class="text-sm px-3 py-1.5 rounded-xl bg-accent text-white hover:bg-accent/90">Daftar</router-link>
-        </template>
+      <!-- Right -->
+      <div class="flex items-center gap-3">
+
+        <!-- Search -->
+        <div
+          class="
+          hidden md:flex
+          items-center
+          px-4 py-2
+
+          rounded-xl
+          bg-white/30
+          "
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-4 h-4 text-gray-500"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-4.35-4.35M16 10a6 6 0 11-12 0 6 6 0 0112 0z"
+            />
+          </svg>
+
+          <input
+            type="text"
+            placeholder="Cari film..."
+            class="
+            ml-2
+            bg-transparent
+            outline-none
+            text-sm
+            w-36
+            "
+          />
+        </div>
+
+        <!-- Profile -->
+        <button
+          class="
+          w-10 h-10
+          rounded-full
+
+          bg-[#C8A27C]
+          text-white
+          font-semibold
+
+          hover:scale-105
+          transition
+          "
+        >
+          J
+        </button>
       </div>
     </nav>
   </header>
