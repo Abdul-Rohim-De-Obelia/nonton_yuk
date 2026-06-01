@@ -19,7 +19,7 @@ async function handleLogout() {
 
 <template>
   <nav class="sticky top-0 z-50 w-full px-6 py-4 bg-white/40 backdrop-blur-md border-b border-white/50 shadow-sm transition-all duration-300">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <div class="max-w-7xl mx-auto flex justify-between">
       <!-- Logo / Title -->
       <h1 class="text-2xl font-extrabold text-gray-800 tracking-widest drop-shadow-sm">
         NONTON<span class="text-amber-600">YUK</span>
