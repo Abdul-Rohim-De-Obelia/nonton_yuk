@@ -5,7 +5,7 @@ import { useAuthStore } from '@/stores/auth'
 const routes = [
   { path: '/', name: 'home', component: () => import('@/views/HomeView.vue') },
   { path: '/movie/:id', name: 'detail', component: () => import('@/views/MovieDetailView.vue') },
-  { path: '/watch/:id', name: 'watch', component: () => import('@/views/WatchView.vue'), meta: { requiresAuth: true } },
+  { path: '/watch/:id', name: 'watch', component: () => import('@/views/WatchView.vue') },
   { path: '/genre/:name', name: 'genre', component: () => import('@/views/GenreView.vue') },
   { path: '/search', name: 'search', component: () => import('@/views/SearchView.vue') },
   { path: '/login', name: 'login', component: () => import('@/views/LoginView.vue') },
