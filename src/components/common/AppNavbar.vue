@@ -18,60 +18,23 @@ async function handleLogout() {
 </script>
 
 <template>
-  <header
-    class="sticky top-4 z-50 max-w-7xl mx-auto px-4"
-  >
-    <nav
-      class="
-      flex items-center justify-between
-      px-6 py-4
-      rounded-3xl
-      bg-white/30
-      backdrop-blur-xl
-      border border-white/50
-      shadow-lg"
-    >
-      <router-link
-        to="/"
-        class="text-2xl font-bold text-[#2D2A26]"
-      >
-        Nonton Yuk
-      </router-link>
-
-      <div class="hidden md:flex gap-8">
-        <router-link
-          to="/"
-          class="text-[#2D2A26] hover:text-[#C8A27C]"
-        >
-          Home
-        </router-link>
-
-        <router-link
-          to="/favorites"
-          class="text-[#2D2A26] hover:text-[#C8A27C]"
-        >
-          Favorit
-        </router-link>
-
-        <router-link
-          to="/history"
-          class="text-[#2D2A26] hover:text-[#C8A27C]"
-        >
-          Riwayat
-        </router-link>
-      </div>
-
-      <button
-        class="
-        px-4 py-2
-        rounded-xl
-        bg-[#C8A27C]
-        text-white
-        hover:scale-105
-        transition"
-      >
-        Login
-      </button>
-    </nav>
-  </header>
+  <nav class="sticky top-0 z-50 w-full px-6 py-4 bg-white/40 backdrop-blur-md border-b border-white/50 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <!-- Logo / Title -->
+      <h1 class="text-2xl font-extrabold text-gray-800 tracking-widest drop-shadow-sm">
+        NONTON<span class="text-amber-600">YUK</span>
+      </h1>
+      
+      <!-- Navigation Links -->
+      <ul class="flex gap-8 text-gray-700 font-medium">
+        <li class="hover:text-amber-600 transition-colors cursor-pointer">Home</li>
+        <li class="hover:text-amber-600 transition-colors cursor-pointer">Movies</li>
+        <li class="hover:text-amber-600 transition-colors cursor-pointer">Profile</li>
+      </ul>
+    </div>
+  </nav>
 </template>
+
+<script setup>
+// Logika navbar bisa ditambahkan di sini
+</script>
