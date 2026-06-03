@@ -12,7 +12,7 @@
 }
 
 body {
-  background: #f7f3ee;
+  background: url:"bg.png";
 }
 
 body::before {
