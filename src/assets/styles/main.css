@@ -12,7 +12,7 @@
 }
 
 body {
-  background: url:"bg.png";
+  background: url("bg.png");
 }
 
 body::before {
