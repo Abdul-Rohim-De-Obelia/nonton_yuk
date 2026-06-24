@@ -1,4 +1,4 @@
-<!-- File ini diletakkan di: src/views/SearchView.vue -->
+
 <script setup>
 import { ref, onMounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
