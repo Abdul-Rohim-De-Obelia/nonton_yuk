@@ -1,4 +1,4 @@
-<!-- File ini diletakkan di: src/components/common/AppFooter.vue -->
+
 <template>
   <footer class="border-t border-accent/10 bg-cream-light mt-12">
     <div class="max-w-7xl mx-auto px-4 py-8 text-center text-sm text-brown-soft">
