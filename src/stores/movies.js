@@ -1,4 +1,4 @@
-// File ini diletakkan di: src/stores/movies.js
+
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import * as movieService from '@/services/movieService'
