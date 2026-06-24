@@ -1,4 +1,4 @@
-<!-- File ini diletakkan di: src/views/ProfileView.vue -->
+
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useAuthStore } from '@/stores/auth'
