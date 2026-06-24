@@ -1,4 +1,4 @@
-<!-- File ini diletakkan di: src/components/movie/VideoPlayer.vue -->
+
 <script setup>
 import { computed } from 'vue'
 
