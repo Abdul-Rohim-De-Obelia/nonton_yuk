@@ -1,4 +1,4 @@
-<!-- File ini diletakkan di: src/views/admin/AdminDashboard.vue -->
+
 <script setup>
 import { ref, onMounted } from 'vue'
 import { supabase } from '@/services/supabase'
