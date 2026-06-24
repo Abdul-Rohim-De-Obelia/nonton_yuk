@@ -1,4 +1,4 @@
-<!-- File ini diletakkan di: src/components/movie/MovieGrid.vue -->
+
 <script setup>
 import MovieCard from './MovieCard.vue'
 defineProps({
