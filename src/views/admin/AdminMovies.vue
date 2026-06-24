@@ -1,4 +1,4 @@
-<!-- File ini diletakkan di: src/views/admin/AdminMovies.vue -->
+
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import { supabase } from '@/services/supabase'
