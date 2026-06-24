@@ -1,17 +1,17 @@
-# 🎬 NontonYuk — Aplikasi Streaming Film
+# NontonYuk — Aplikasi Streaming Film
 
 Aplikasi streaming film modern dengan desain minimalis bertema *cream*, dibangun dengan **Vue 3 + Vite + Pinia + Vue Router + Tailwind CSS + Supabase**.
 
-## ✨ Fitur
+##  Fitur
 
-- 🏠 Beranda dengan hero & daftar film terbaru
-- 🔍 Pencarian film & penjelajahan berdasarkan genre
-- 🎥 Halaman streaming (mendukung file video & embed YouTube/Vimeo)
-- 🔐 Autentikasi (daftar / masuk / keluar) via Supabase Auth
-- ❤️ Favorit & riwayat tontonan per pengguna
-- 📱 Responsif, mobile-first
+-  Beranda dengan hero & daftar film terbaru
+-  Pencarian film & penjelajahan berdasarkan genre
+-  Halaman streaming (mendukung file video & embed YouTube/Vimeo)
+-  Autentikasi (daftar / masuk / keluar) via Supabase Auth
+-  Favorit & riwayat tontonan per pengguna
+-  Responsif, mobile-first
 
-## 📁 Struktur Folder
+##  Struktur Folder
 
 ```
 nonton-yuk/
@@ -41,9 +41,9 @@ nonton-yuk/
                 SearchView, LoginView, RegisterView, ProfileView, NotFoundView)
 ```
 
-> ⚠️ Beberapa file diberi nama dengan prefiks (mis. `router-index.js`, `store-auth.js`) karena keterbatasan penamaan. Saat menyusun proyek, **ganti namanya** sesuai komentar `// File ini diletakkan di:` di baris pertama setiap file.
 
-## 🚀 Cara Menjalankan
+
+##  Cara Menjalankan
 
 ```bash
 # 1. Instal dependensi
@@ -59,9 +59,9 @@ npm run dev
 npm run build
 ```
 
-## 🗄️ Skema Database (Supabase SQL)
+##  Skema Database (Supabase SQL)
 
-Jalankan SQL berikut di **SQL Editor** Supabase:
+kode SQL ini di **SQL Editor** Supabase:
 
 ```sql
 -- Tabel genre
@@ -127,7 +127,7 @@ create policy "public read movies" on movies for select using (true);
 create policy "public read genres" on genres for select using (true);
 ```
 
-## 📝 Catatan
+##  Catatan
 > Relasi `movies.genres(name)` di service mengasumsikan foreign key `genre_id`. Sesuaikan query jika struktur relasi berbeda.
 
 ---
