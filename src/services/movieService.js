@@ -1,4 +1,4 @@
-// File ini diletakkan di: src/services/movieService.js
+
 import { supabase } from './supabase'
 
 // Ambil semua film (opsional limit)
