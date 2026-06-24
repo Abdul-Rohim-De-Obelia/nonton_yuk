@@ -1,4 +1,4 @@
-<!-- File ini diletakkan di: src/components/movie/MovieCard.vue -->
+
 <script setup>
 defineProps({ movie: { type: Object, required: true } })
 </script>
