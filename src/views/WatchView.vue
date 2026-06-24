@@ -1,4 +1,4 @@
-<!-- File ini diletakkan di: src/views/WatchView.vue -->
+
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
