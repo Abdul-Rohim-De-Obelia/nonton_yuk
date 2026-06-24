@@ -1,4 +1,4 @@
-<!-- File ini diletakkan di: src/views/NotFoundView.vue -->
+
 <template>
   <div class="max-w-md mx-auto text-center py-24 px-4">
     <h1 class="text-6xl font-bold text-accent">404</h1>
