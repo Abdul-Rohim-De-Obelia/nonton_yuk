@@ -1,4 +1,4 @@
-<!-- File ini diletakkan di: src/views/admin/AdminLayout.vue -->
+
 <script setup>
 import { useAuthStore } from '@/stores/auth'
 import { useRouter, useRoute } from 'vue-router'
