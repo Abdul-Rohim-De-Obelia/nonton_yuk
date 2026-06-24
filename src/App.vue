@@ -1,4 +1,4 @@
-<!-- File ini diletakkan di: src/App.vue -->
+
 <script setup>
 // Komponen root: navbar + konten halaman + footer
 import { onMounted } from 'vue'
