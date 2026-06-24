@@ -1,4 +1,4 @@
-<!-- File ini diletakkan di: src/components/common/LoadingSpinner.vue -->
+
 <template>
   <div class="flex justify-center items-center py-12">
     <div class="w-10 h-10 border-4 border-accent/30 border-t-accent rounded-full animate-spin"></div>
