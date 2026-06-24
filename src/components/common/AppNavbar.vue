@@ -1,4 +1,4 @@
-<!-- File ini diletakkan di: src/components/common/AppNavbar.vue -->
+
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
