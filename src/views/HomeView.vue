@@ -1,4 +1,4 @@
-<!-- File ini diletakkan di: src/views/HomeView.vue -->
+
 <script setup>
 import { onMounted, computed } from 'vue'
 import { useMoviesStore } from '@/stores/movies'
